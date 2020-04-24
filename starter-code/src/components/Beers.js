@@ -35,7 +35,12 @@ class Beers extends Component {
     showBeers = () => {
         return this.state.beers.map(eachBeer => {
             return (
-                <div>{eachBeer.name}</div>
+                <div>
+                    <div key={eachBeer._id}>{eachBeer.name}</div>
+                    <img key={eachBeer._id} src={eachBeer.image_url} alt=""></img>
+                    <h3 key={eachBeer._id}>{eachBeer.name}</h3>
+                    <h6 key={eachBeer._id}>{eachBeer.tagline}</h6>
+                </div>
             )
         })
     }
