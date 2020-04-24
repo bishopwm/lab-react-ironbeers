@@ -11,10 +11,10 @@ class App extends Component {
     return (
       <div>
         <Switch>
-          <Route exact path='/' component={(props) => <Home {...props} />}></Route>
-          <Route exact path='/beers' component={(props) => <Beers {...props} />}></Route>
-          <Route exact path='/random-beers' component={(props) => <RandomBeers {...props} />}></Route>
-          <Route exact path='/new-beer' component={(props) => <NewBeer {...props} />}></Route>
+          <Route exact path='/' render={(props) => <Home {...props} />}></Route>
+          <Route exact path='/beers' render={(props) => <Beers {...props} />}></Route>
+          <Route exact path='/random-beers' render={(props) => <RandomBeers {...props} />}></Route>
+          <Route exact path='/new-beer' render={(props) => <NewBeer {...props} />}></Route>
         </Switch>
       </div>
     );

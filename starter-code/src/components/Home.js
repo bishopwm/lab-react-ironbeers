@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import NavBar from './NavBar';
 import './Home.css'
 
 class Home extends Component {
@@ -33,7 +32,7 @@ class Home extends Component {
                         </Link>
                     </div>
                     <div className="new-beer">
-                        <Link  className="home-links" to="./new-beer">
+                        <Link className="home-links" to="./new-beer">
                             
                             <h2>New Beer</h2>
                             <img src="/images/new-beer.png" alt="beer" />
