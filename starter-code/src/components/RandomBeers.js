@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import NavBar from './NavBar';
 
 class RandomBeers extends Component {
     render() {
         return (
             <div>
-                <h1>Random Beer</h1>
-                <img src="./images/random-beer.png" alt=""></img>
+                <NavBar />
+                <h1>Random Beers</h1>
             </div>
         );
     }
