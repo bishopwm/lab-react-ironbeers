@@ -1,0 +1,8 @@
+.all-beers-list {
+    margin-top: 15px;
+}
+
+#beer-name {
+    background-color: black;
+    color: white;
+}

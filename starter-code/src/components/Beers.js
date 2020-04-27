@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar';
 import axios from 'axios';
-
+import './Beers.css'
+import { Link } from 'react-router-dom';
 
 let baseUrl = "http://ih-beers-api.herokuapp.com/beers" // these variables need to be set above the class, or you'll get undefined when you go to call 'getAllBeers()' !!!
 let allBeersEndpoint = '/'
@@ -35,11 +36,15 @@ class Beers extends Component {
     showBeers = () => {
         return this.state.beers.map(eachBeer => {
             return (
-                <div>
-                    <div key={eachBeer._id}>{eachBeer.name}</div>
-                    <img key={eachBeer._id} src={eachBeer.image_url} alt=""></img>
-                    <h3 key={eachBeer._id}>{eachBeer.name}</h3>
-                    <h6 key={eachBeer._id}>{eachBeer.tagline}</h6>
+                <div className="col-4">
+                    <Link to={`/beers/${eachBeer._id}`}>{eachBeer.tagline}</Link>
+                    <ul className="list-group all-beers-list">
+                        <li className="list-group-item all-beers-list-item" id="beer-name"> {eachBeer.name}</li>
+                        <li className="list-group-item all-beers-list-item"><img src={eachBeer.image_url} alt="" style={{width: "50px"}}></img></li>
+                        <li className="list-group-item all-beers-list-item">{eachBeer.name}</li>
+                        <li className="list-group-item all-beers-list-item">{eachBeer.tagline}</li>
+                  
+                    </ul>
                 </div>
             )
         })

@@ -5,6 +5,7 @@ import Beers from './components/Beers';
 import RandomBeers from './components/RandomBeers';
 import NewBeer from './components/NewBeer';
 import Home from './components/Home';
+import Beer from './components/Beer';
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
           <Route exact path='/beers' render={(props) => <Beers {...props} />}></Route>
           <Route exact path='/random-beers' render={(props) => <RandomBeers {...props} />}></Route>
           <Route exact path='/new-beer' render={(props) => <NewBeer {...props} />}></Route>
+          <Route exact path='/beers/:beerID' render={(props) => <Beer {...props} />}></Route>
         </Switch>
       </div>
     );
